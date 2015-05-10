@@ -9,10 +9,11 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-      <%= link_to "prodmentum", '#', id: "logo" %>
+      <%= link_to "prodmentum", root_path, id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Products', new_product_path %></li>
+          <li><%= link_to 'Ideas', ideas_path %></li>
           </ul>
         </nav>
       </div>

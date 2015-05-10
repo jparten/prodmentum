@@ -21,11 +21,12 @@ class IdeasController < ApplicationController
   end
 
   def edit
-    @idea = Idea.find(idea_params) 
+    @idea = Idea.find(params[:id]) 
   end
 
   def update
-    if @idea.update(idea_params) 
+    @idea = Idea.find(params[:id]) 
+    if @idea.update_attributes(idea_params) 
       redirect_to @idea, notice: "Idea updated"
     else 
       render :edit 
@@ -33,6 +34,7 @@ class IdeasController < ApplicationController
   end
 
   def destroy
+    @idea = Idea.find(params[:id]) 
     @idea.destroy 
     redirect_to ideas_path, alert: "Idea successfully deleted." 
   end

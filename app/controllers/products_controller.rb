@@ -1,5 +1,13 @@
 class ProductsController < ApplicationController
-   def new
+  def index
+    @products = Product.all 
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def new
     @product = Product.new
   end
 
@@ -12,11 +20,27 @@ class ProductsController < ApplicationController
     end 
   end
 
-  def show
-    @product = Product.find(params[:id])
+  def edit
+    @product = Product.find(params[:id]) 
+  end
+
+  def update
+    @product = Product.find(params[:id]) 
+    if @product.update_attributes(product_params) 
+      redirect_to @product, notice: "Product updated"
+    else 
+      render :edit 
+    end
+  end
+
+  def destroy
+    @product = Product.find(params[:id]) 
+    @product.destroy 
+    redirect_to products_path, alert: "Product successfully deleted." 
   end
 
   private
+
   def product_params
       params.require(:product).permit(:name, :description)
   end

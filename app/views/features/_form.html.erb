@@ -1,0 +1,15 @@
+ <%= render "shared/errors", object: @feature %> 
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@feature) do |f| %> 
+    <%= render "shared/errors", object: @feature %> 
+        <%= f.label :name %> 
+        <%= f.text_field :name %> 
+
+        <%= f.label :description %> 
+        <%= f.text_area :description %> 
+
+        <%= f.submit "Save Feature", class: "btn btn-primary" %>
+     <% end %> 
+  </div>
+</div>

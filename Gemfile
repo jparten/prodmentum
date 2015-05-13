@@ -15,6 +15,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt-ruby'
 gem 'carrierwave'
+gem "fog-aws"
+gem 'fog'
 
 group :development, :test do
   gem 'byebug'

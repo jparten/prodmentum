@@ -2,6 +2,7 @@
 <div class="row">
   <div class="col-md-2 col-md-offset-2"> 
       <p><%= @product.description %></p>
+      <%= image_tag @product.image_url %> 
       <footer> 
         <%= link_to 'Edit', edit_product_path(@product)%> 
         <%= link_to 'Delete', @product, method: :delete, data: { confirm: "Are you sure?" } %> 

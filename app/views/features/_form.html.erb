@@ -9,6 +9,9 @@
         <%= f.label :description %> 
         <%= f.text_area :description %> 
 
+        <%= f.label :status %> 
+        <%= f.select(:status, options_for_select([['Complete', 'Complete'], ['In-Development', 'In-Development'], ['In-Design', 'In-Design'], ['On-Deck', 'On-Deck'], ['Backlog', 'Backlog'], ['Unscheduled', 'Unscheduled']])) %> 
+
         <%= f.submit "Save Feature", class: "btn btn-primary" %>
      <% end %> 
   </div>

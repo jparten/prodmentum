@@ -18,6 +18,10 @@ gem 'carrierwave'
 gem "fog-aws"
 gem 'fog'
 
+gem 'ratyrate', '~> 1.2.2.alpha'
+
+gem 'devise', '~> 3.4.1'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

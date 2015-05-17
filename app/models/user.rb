@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :products
   has_many :ideas
   has_many :features 
+  has_many :kpis
+  has_many :competitors
 
   ratyrate_rater
 

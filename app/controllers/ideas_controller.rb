@@ -1,10 +1,14 @@
 class IdeasController < ApplicationController
+
+  before_action :authenticate_user!
+  
   def index
     @ideas = Idea.all 
   end
 
   def show
     @idea = Idea.find(params[:id]) 
+    @idea.user_id = current_user.id
   end
 
   def new
@@ -13,6 +17,7 @@ class IdeasController < ApplicationController
 
   def create
     @idea = Idea.new(idea_params) 
+    @idea.user_id = current_user.id
     if @idea.save 
       redirect_to @idea, notice: "Thanks for sharing your idea."
     else 
@@ -42,7 +47,7 @@ class IdeasController < ApplicationController
   private 
 
   def idea_params 
-    params.require(:idea).permit(:name, :description)
+    params.require(:idea).permit(:name, :description, :image, :user_id)
   end 
   
 end

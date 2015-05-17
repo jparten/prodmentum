@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  before_action :authenticate_user!
+
   def index
     @products = Product.all 
   end
@@ -13,6 +16,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params) 
+    @product.user_id = current_user.id
     if @product.save 
       redirect_to @product, notice: "Your product has been successfully created."
     else 
@@ -42,6 +46,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-      params.require(:product).permit(:name, :description, :image)
+      params.require(:product).permit(:name, :description, :image, :user_id)
   end
 end

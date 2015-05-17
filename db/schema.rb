@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516195942) do
+ActiveRecord::Schema.define(version: 20150517044905) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -22,6 +22,28 @@ ActiveRecord::Schema.define(version: 20150516195942) do
     t.datetime "updated_at"
   end
 
+  create_table "competitors", force: :cascade do |t|
+    t.string  "name"
+    t.text    "description"
+    t.string  "address"
+    t.string  "state"
+    t.string  "zip"
+    t.string  "country"
+    t.string  "image"
+    t.integer "user_id"
+    t.text    "key_products"
+    t.text    "strengths"
+    t.text    "weaknesses"
+    t.text    "opportunities"
+    t.text    "threats"
+    t.string  "url"
+    t.string  "city"
+    t.integer "employees"
+    t.string  "market_cap"
+    t.string  "stock_symbol"
+    t.string  "CEO"
+  end
+
   create_table "features", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -29,6 +51,8 @@ ActiveRecord::Schema.define(version: 20150516195942) do
     t.datetime "updated_at",  null: false
     t.integer  "product_id"
     t.string   "status"
+    t.string   "image"
+    t.integer  "user_id"
   end
 
   add_index "features", ["product_id"], name: "index_features_on_product_id"
@@ -38,6 +62,8 @@ ActiveRecord::Schema.define(version: 20150516195942) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "image"
+    t.integer  "user_id"
   end
 
   create_table "kpis", force: :cascade do |t|
@@ -71,6 +97,7 @@ ActiveRecord::Schema.define(version: 20150516195942) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
+    t.integer  "user_id"
   end
 
   create_table "rates", force: :cascade do |t|

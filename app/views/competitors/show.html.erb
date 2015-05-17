@@ -1,0 +1,38 @@
+<h1><%= @competitor.name %> </h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2"> 
+      <p><%= @competitor.description %></p>
+      <%= image_tag @competitor.image.url %> 
+      <h2> Basic HQ Information </h2>
+      <ul>
+        <li>URL: <%= @competitor.url %> </li> 
+        <li>Address: <%= @competitor.address %> </li> 
+        <li>City: <%= @competitor.city %> </li>
+        <li>Zip: <%= @competitor.zip %> </li> 
+        <li>Country: <%= @competitor.country %> </li>  
+      </ul> 
+      <h2> Company Details </h2> 
+      <ul>
+        <li> Number of Employees: <%= @competitor.employees %> </li>
+        <li> Market Cap: <%= @competitor.market_cap %> </li>
+        <li> CEO: <%= @competitor.CEO %> </li> 
+        <li><%= simple_format(@competitor.key_products) %> </li> 
+      </ul> 
+      <h2> SWOT Analysis </h2> 
+      <h3> Strengths </h3> 
+      <p> <%= simple_format(@competitor.strengths) %> </p> 
+      <h3> Weaknesses </h3> 
+      <p> <%= simple_format(@competitor.weaknesses) %> </p>
+      <h3> Opportunities </h3> 
+      <p> <%= simple_format(@competitor.opportunities) %> </p> 
+      <h3> Threats </h3> 
+      <p> <%= simple_format(@competitor.threats) %> </p> 
+
+
+      <footer> 
+        <%= link_to 'Edit', edit_competitor_path(@competitor)%> | 
+        <%= link_to 'Delete', @competitor, method: :delete, data: { confirm: "Are you sure?" } %> | 
+        <%= link_to 'Back', competitors_path %> 
+      </footer> 
+  </div>
+</div>

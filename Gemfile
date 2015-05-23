@@ -18,11 +18,17 @@ gem 'carrierwave'
 gem "fog-aws"
 gem 'fog'
 
+gem 'ratyrate', '~> 1.2.2.alpha'
+
+gem 'devise', '~> 3.4.1'
+
+gem 'masonry-rails', '~> 0.2.4'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
   gem 'rspec-rails', '~> 3.0'
+  gem 'spring'
   gem 'capybara', '~> 2.4.0'
   gem 'factory_girl'
   gem 'factory_girl_rails'

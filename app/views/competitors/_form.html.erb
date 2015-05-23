@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@competitor, :html => {multipart: true}) do |f| %> 
+    <%= render "shared/errors", object: @competitor %> 
+
+        <h2>Basic Information</h2>
+
+       <div class="form-group">
+        <%= f.label :name %> 
+        <%= f.text_field :name, class: "form-control" %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :url, "URL" %> 
+        <%= f.text_field :url, class: "form-control" %>
+
+       <div class="form-group">
+        <%= f.label :description %> 
+        <%= f.text_area :description, class: "form-control"  %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :address %> 
+        <%= f.text_field :address, class: "form-control" %>
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :city %> 
+        <%= f.text_field :city, class: "form-control" %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :state %> 
+        <%= f.text_field :state, class: "form-control" %> 
+
+       <div class="form-group">
+        <%= f.label :zip %> 
+        <%= f.text_field :zip, class: "form-control" %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :country %> 
+        <%= f.text_field :country, class: "form-control"  %>
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :image %> 
+        <%= f.file_field :image, class: "form-control"  %> 
+       </div> 
+
+        <h2> Company Details </h2> 
+
+       <div class="form-group">
+        <%= f.label :ceo, "CEO" %> 
+        <%= f.text_field :CEO, class: "form-control"  %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :market_cap %> 
+        <%= f.text_field :market_cap, class: "form-control"  %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :stock_symbol %> 
+        <%= f.text_field :stock_symbol, class: "form-control"  %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :employees %> 
+        <%= f.text_field :employees, class: "form-control"  %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :key_products %> 
+        <%= f.text_area :key_products, class: "form-control"  %> 
+       </div> 
+
+        <h2> SWOT Analysis </h2>
+
+       <div class="form-group">
+        <%= f.label :strengths %> 
+        <%= f.text_area :strengths, class: "form-control"   %> 
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :weaknesses %> 
+        <%= f.text_area :weaknesses, class: "form-control"   %>
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :opportunities %> 
+        <%= f.text_area :opportunities, class: "form-control"   %>
+       </div> 
+
+       <div class="form-group">
+        <%= f.label :threats %> 
+        <%= f.text_area :threats, class: "form-control"   %>
+       </div> 
+
+       <div class="form-group">
+        <%= f.submit "Save Competitor", class: "btn btn-primary" %>
+       </div> 
+     <% end %> 
+  </div>
+</div>

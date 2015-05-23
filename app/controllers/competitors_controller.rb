@@ -10,7 +10,7 @@ class CompetitorsController < ApplicationController
     @competitor = Competitor.find(params[:id]) 
   end 
 
-    def new
+  def new
     @competitor = Competitor.new
   end
 
@@ -46,7 +46,7 @@ class CompetitorsController < ApplicationController
   private 
 
   def competitor_params 
-    params.require(:competitor).permit(:name, :description, :image, :user_id, :address, :state, :zip, :country, :key_products, :strengths, :weaknesses, :opportunities, :threats, :url)
+    params.require(:competitor).permit(:name, :description, :image, :user_id, :address, :city, :state, :zip, :country, :key_products, :strengths, :weaknesses, :opportunities, :threats, :url)
   end  
 
 

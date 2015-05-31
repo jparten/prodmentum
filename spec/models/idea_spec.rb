@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-describe Idea do 
+describe "an idea"  do 
 
 end 

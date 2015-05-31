@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-describe Competitor do 
+describe "A competitor" do 
 
 end 

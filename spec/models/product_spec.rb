@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Product do 
+describe "A Product" do 
 
 
 end 

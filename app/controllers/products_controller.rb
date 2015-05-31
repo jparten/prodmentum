@@ -12,10 +12,12 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @product.build_kpi
   end
 
   def create
     @product = Product.new(product_params) 
+    @product.build_kpi(product_params[:kpi_attributes])
     @product.user_id = current_user.id
     if @product.save 
       redirect_to @product, notice: "Your product has been successfully created."
@@ -30,6 +32,7 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id]) 
+    @product.kpi.update_attributes(product_params[:kpi_attributes])
     if @product.update_attributes(product_params) 
       redirect_to @product, notice: "Product updated"
     else 
@@ -46,6 +49,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-      params.require(:product).permit(:name, :description, :image, :user_id)
+      params.require(:product).permit(:name, :description, :image, :user_id, kpi_attributes: [:key_data])
   end
 end

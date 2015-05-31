@@ -17,6 +17,7 @@ gem 'bcrypt-ruby'
 gem 'carrierwave'
 gem "fog-aws"
 gem 'fog'
+gem 'googlecharts'
 
 gem 'ratyrate', '~> 1.2.2.alpha'
 

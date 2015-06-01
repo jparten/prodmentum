@@ -1,9 +1,6 @@
- <%= render "shared/errors", object: @feature %> 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@feature) do |f| %> 
-    <%= render "shared/errors", object: @feature %> 
-
+    <%= form_for([@product, @product.features.build]) do |f| %> 
       <div class="form-group">
         <%= f.label :name %> 
         <%= f.text_field :name, class: "form-control"  %> 

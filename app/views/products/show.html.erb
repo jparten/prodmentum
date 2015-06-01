@@ -6,6 +6,12 @@
       <p><%= image_tag @product.image.url %></p>
       <h2>Product Revenue (KPI)</h2>
       <p><%= image_tag @product.kpi_url if !@product.kpi_url.nil? %></p> 
+      <h2><%= @product.features.count %> Features</h2>
+      <%= render @product.features %>
+
+      <h2>Add a feature:</h2>
+      <%= render "features/form" %>
+
       <footer> 
         <%= link_to 'Edit', edit_product_path(@product)%> 
         <%= link_to 'Delete', @product, method: :delete, data: { confirm: "Are you sure?" } %> 

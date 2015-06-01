@@ -2,17 +2,18 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <p>Add a <%= link_to "New Product", new_product_path %></p>
-    <ul> 
     <% @products.each do |product| %> 
-      <li> 
-        <h3> 
-          <%= link_to(product.name, product) %> 
-        </h3>
-        <p> 
-          <%= truncate(product.description, length: 100, separator: ' ') %> 
-        </p> 
-      </li>
+      <div class="col-md-3"> 
+
+              <h3> 
+                <%= link_to(product.name, product) %> 
+              </h3>
+              <p> 
+                <%= truncate(product.description, length: 100, separator: ' ') %> 
+              </p> 
+
+      </div> 
     <% end %> 
-  </ul> 
   </div>
 </div>
+

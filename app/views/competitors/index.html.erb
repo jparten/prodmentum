@@ -2,17 +2,19 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <p>Add a <%= link_to "New Competitor", new_competitor_path %></p>
-    <ul> 
+
     <% @competitors.each do |competitor| %> 
-      <li> 
-        <h3> 
-          <%= link_to(competitor.name, competitor) %> 
-        </h3>
-        <p> 
-          <%= truncate(competitor.description, length: 100, separator: ' ') %> 
-        </p> 
-      </li>
+      <div class="col-md-3"> 
+
+            <h3> 
+              <%= link_to(competitor.name, competitor) %> 
+            </h3>
+            <p> 
+              <%= truncate(competitor.description, length: 100, separator: ' ') %> 
+            </p> 
+
+      </div> 
     <% end %> 
-  </ul> 
+
   </div>
 </div>

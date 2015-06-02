@@ -1,4 +1,4 @@
-class Kpis Controller < ApplicationController 
+class KpisController < ApplicationController 
   
   def import
   end

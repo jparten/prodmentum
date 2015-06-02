@@ -179,11 +179,72 @@ Competitor.create!([
   }
 ])
 
+Kpi.create!([
+  {
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 1
+  },
+  {
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 2
+  },
+  {
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 3
+  },
+  {
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 4
+  },
+  {
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 5
+  }
+])
+
+Feature.create!([
+  {
+    name: "Feature 1",
+    description: "Description for Feature 1",
+    status: "In-Design",
+    product_id: 1
+  },
+  {
+    name: "Feature 2",
+    description: "Description for Feature 2",
+    status: "Complete",
+    product_id: 1
+  },
+  {
+    name: "Feature 3",
+    description: "Description for Feature 3",
+    status: "In-Design",
+    product_id: 2
+  },
+  {
+    name: "Feature 4",
+    description: "Description for Feature 4",
+    status: "Complete",
+    product_id: 2
+  },
+  {
+    name: "Feature 5",
+    description: "Description for Feature 5",
+    status: "In-Design",
+    product_id: 3
+  }
+])
+
 Product.create!([
   {
     name: "Product 1",
     description: "Product 1 does amazing things",
-    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
+    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')), 
     user_id: 1
   },
   {
@@ -215,61 +276,61 @@ Product.create!([
 Idea.create!([
   {
     name: "This is great idea 1", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 2", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 3", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 4", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 5", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 6", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 7", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   },
     {
     name: "This is great idea 8", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png'))
   },
     {
     name: "This is great idea 9", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png'))
   },
     {
     name: "This is great idea 10", 
-    description: "This will be the greates thing since slided bread.",
+    description: "This will be the greatest thing since slided bread.",
     user_id: 1,
     image: File.open(File.join(Rails.root, 'app/assets/images/default.png')) 
   }

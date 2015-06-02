@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
+ruby '2.2.1'
 
 gem 'rails', '4.2.0'
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
 
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.2.0.0'
@@ -18,6 +20,8 @@ gem 'carrierwave'
 gem "fog-aws"
 gem 'fog'
 gem 'googlecharts'
+gem 'figaro'
+gem 'rails_12factor', group: :production
 
 gem 'ratyrate', '~> 1.2.2.alpha'
 

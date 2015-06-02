@@ -10,7 +10,7 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :kpi
 
 def kpi_url
-  Gchart.line(:size => '400x400', :legend => ['Dollars per Month'], :axis_with_labels => ['x','y'], :title => kpi_name,:data => kpi_data) if !kpi_data.nil?
+  Gchart.line(:size => '400x400', :legend => ['Dollars per Month'], :axis_with_labels => ['r'], :title => kpi_name,:data => kpi_data) if !kpi_data.nil?
 end
 
 private

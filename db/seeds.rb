@@ -179,31 +179,36 @@ Competitor.create!([
   }
 ])
 
-Kpi.create!([
+Product.create!([
   {
-    name: "Revenue",
-    key_data: "3500,3600,2700,5900",
-    product_id: 1
+    name: "Product 1",
+    description: "Product 1 does amazing things",
+    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')), 
+    user_id: 1
   },
   {
-    name: "Revenue",
-    key_data: "3500,3600,2700,5900",
-    product_id: 2
+    name: "Product 2",
+    description: "Product 2 does amazing things",
+    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
+    user_id: 1
+  },
+    {
+    name: "Product 3",
+    description: "Product 3 does amazing things",
+    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
+    user_id: 1
   },
   {
-    name: "Revenue",
-    key_data: "3500,3600,2700,5900",
-    product_id: 3
+    name: "Product 4",
+    description: "Product 4 does amazing things",
+    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
+    user_id: 1
   },
   {
-    name: "Revenue",
-    key_data: "3500,3600,2700,5900",
-    product_id: 4
-  },
-  {
-    name: "Revenue",
-    key_data: "3500,3600,2700,5900",
-    product_id: 5
+    name: "Product 5",
+    description: "Product 5 does amazing things",
+    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
+    user_id: 1
   }
 ])
 
@@ -240,36 +245,31 @@ Feature.create!([
   }
 ])
 
-Product.create!([
+Kpi.create!([
   {
-    name: "Product 1",
-    description: "Product 1 does amazing things",
-    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')), 
-    user_id: 1
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 1
   },
   {
-    name: "Product 2",
-    description: "Product 2 does amazing things",
-    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
-    user_id: 1
-  },
-    {
-    name: "Product 3",
-    description: "Product 3 does amazing things",
-    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
-    user_id: 1
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 2
   },
   {
-    name: "Product 4",
-    description: "Product 4 does amazing things",
-    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
-    user_id: 1
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 3
   },
   {
-    name: "Product 5",
-    description: "Product 5 does amazing things",
-    image: File.open(File.join(Rails.root, 'app/assets/images/default.png')),
-    user_id: 1
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 4
+  },
+  {
+    name: "Revenue",
+    key_data: "3500,3600,2700,5900",
+    product_id: 5
   }
 ])
 

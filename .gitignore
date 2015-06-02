@@ -18,3 +18,6 @@
 
 *.DS_Store
 carrier_wave.rb
+
+# Ignore application configuration
+/config/application.yml

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :features
   end
   resources :competitors
+  resources :features, :only => [:show]
 end

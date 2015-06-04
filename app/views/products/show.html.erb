@@ -7,7 +7,9 @@
       <h2>Product Revenue (KPI)</h2>
       <p><%= image_tag @product.kpi_url if !@product.kpi_url.nil? %></p> 
       <h2><%= @product.features.count %> Features</h2>
-      <%= render @product.features %>
+      <% @product.features.each do |f| %>
+        <p><%= link_to f.name, feature_path(f.id) %></p>
+      <% end %>
 
       <h2>Add a feature:</h2>
       <%= render "features/form" %>

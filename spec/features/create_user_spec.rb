@@ -5,16 +5,19 @@ describe "creating a user" do
   context "with valid parameters" do 
 
     before do 
-      visit "/users/new"
-      fill_in "email", with: "testuser@example.com" 
+      visit "/users/sign_up"
+      fill_in "Email", with: "testuser@example.com" 
+      fill_in "Password", with: "Password123" 
+      fill_in "Password confirmation", with: "Password123" 
+      click_button 'Sign up'
     end 
 
     it "tells the user they have a new user" do 
-      expect(page).to have_content "Your user has been successfully created."
+      expect(page).to have_content "You have signed up successfully"
     end 
 
-    it "sends user to the user show page" do 
-      expect(page).to have_content "#{user.name}" 
+    it "sends user to the root page" do 
+      expect(page.current_path).to eq('/')
     end 
 
   end 

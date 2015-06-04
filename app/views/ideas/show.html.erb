@@ -4,9 +4,9 @@
       <p><%= @idea.description %></p>
       <div>
         <% if current_user %> 
-          Potential Business Impact: <%= rating_for @idea, 'business_impact', disable_after_rate: false %> <br> 
-          Technically Feasible: <%= rating_for @idea, "technically_feasible", disable_after_rate: false %> <br> 
-          Speed to Market: <%= rating_for @idea, "speed_to_market", disable_after_rate: false %> 
+          Potential Business Impact: <%= rating_for @idea, 'business_impact', disable_after_rate: false, star_path: '/images' %> <br> 
+          Technically Feasible: <%= rating_for @idea, "technically_feasible", disable_after_rate: false, star_path: '/images' %> <br> 
+          Speed to Market: <%= rating_for @idea, "speed_to_market", disable_after_rate: false, star_path: '/images' %> 
         <% end %> 
       </div> 
       <br> 
